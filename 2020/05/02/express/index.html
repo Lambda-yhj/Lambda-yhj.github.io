@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>express快速搭建自己的个人网站 | Lambda的博客</title>
+  <title>Express快速搭建自己的个人网站 | Lambda的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="​平时我们会使用手机去浏览网页信息，各种形色不一的网站，不乏有设计巧妙，简洁清新的网页，如豆瓣FM等等，浏览起来极度舒适。它们有的是分享知识和音乐，有的是个性网站，分享生活，说的我都想搭建一个自己的个人网站了。那么就开始吧！我们使用Express框架来快速搭建一个个人网站！ 认识Express什么是Express？ Express - 基于Nodejs平台，快速，开放，极简的web开发框架。">
-<meta name="keywords" content="express,node,个人网站">
+<meta name="keywords" content="express,node,个人网站,web服务器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="express快速搭建自己的个人网站">
+<meta property="og:title" content="Express快速搭建自己的个人网站">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;02&#x2F;express&#x2F;index.html">
 <meta property="og:site_name" content="Lambda的博客">
 <meta property="og:description" content="​平时我们会使用手机去浏览网页信息，各种形色不一的网站，不乏有设计巧妙，简洁清新的网页，如豆瓣FM等等，浏览起来极度舒适。它们有的是分享知识和音乐，有的是个性网站，分享生活，说的我都想搭建一个自己的个人网站了。那么就开始吧！我们使用Express框架来快速搭建一个个人网站！ 认识Express什么是Express？ Express - 基于Nodejs平台，快速，开放，极简的web开发框架。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-05-05T05:23:26.093Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;express_install.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;express_hello.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;express_frame.png">
+<meta property="og:updated_time" content="2020-05-05T07:50:24.496Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;express_install.png">
   
     <link rel="alternative" href="/atom.xml" title="Lambda的博客" type="application/atom+xml">
   
@@ -52,7 +56,7 @@
 		  <h1 class="header-author"><a href="/">Lambda</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">年轻，年轻人的事情。</p>
+		<p class="header-subtitle">当你用心去写一些东西时，就希望被别人看见。</p>
 		
 
 		<nav class="header-menu">
@@ -112,7 +116,7 @@
 			  <h1 class="header-author js-header-author">Lambda</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>年轻，年轻人的事情。<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>当你用心去写一些东西时，就希望被别人看见。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -166,7 +170,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      express快速搭建自己的个人网站
+      Express快速搭建自己的个人网站
     </h1>
   
 
@@ -187,11 +191,12 @@
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>因为是基于node的嘛，所以先得安装node环境，戳<a href="https://nodejs.org/en/" target="_blank" rel="noopener">✈️</a>，找到适合自己电脑的node版本，下载安装，运行<code>node -v</code>，安装成功则可以查看node版本。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&gt; node -v</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">v10.17.0</span></pre></td></tr></table></figure>
 
-<p>之后就是安装Express，新建文件夹<strong>myWebsite</strong>，打开命令行窗口输入<code>npm install express --save</code>，等待安装完成。</p>
+<p>之后就是安装Express，新建文件夹<strong>myWebsite</strong>，打开命令行窗口输入<code>npm install express --save</code>，等待安装完成。<br><img src="/assets/blogImg/express_install.png" alt="Alt &quot;express_install.png&quot;" title="express_install.png"></p>
 <h2 id="创建自己的个人网站"><a href="#创建自己的个人网站" class="headerlink" title="创建自己的个人网站"></a>创建自己的个人网站</h2><p>在命令行输入<code>npx express-generator</code>，执行完成。这时我们的个人网站已经建成，安装依赖<code>npm install</code>，会将package.json里面配置的运行需要依赖的库安装到本地，然后运行它<code>DEBUG=mywebsite:* npm start</code>，也可以到<strong>./bin</strong>目录下<code>node www</code>！</p>
-<p>打开浏览器，地址栏输入<code>localhost:3000</code>，即可看到默认的网页。</p>
+<p>打开浏览器，地址栏输入<code>localhost:3000</code>，即可看到默认的网页。<br><img src="/assets/blogImg/express_hello.png" alt="Alt &quot;express_hello.png&quot;" title="express_hello.png"></p>
 <p>接下来就需要你扎实的<code>html + css + javascript</code>基础来设计丰富自己的网页了，可以借鉴他人，然后慢慢的写出有自己个性的网页。加油！特种兵。</p>
 <h2 id="认识Express框架"><a href="#认识Express框架" class="headerlink" title="认识Express框架"></a>认识Express框架</h2><p>目录结构：</p>
+<p><img src="/assets/blogImg/express_frame.png" alt="Alt &quot;express_frame.png&quot;" title="express_frame.png"></p>
 <ul>
 <li><p><code>bin</code>下<code>www</code>文件是启动文件，里面内容是创建一个http还是https的服务。</p>
 </li>
@@ -218,13 +223,13 @@
 <li><code>package-lock.json</code>将你初始化应用是安装的库的信息，保存在这个文件，因为后面可能安装其他库来扩展应用，而这个文件只记录你第一次<code>npm install</code>所安装的库。</li>
 <li><code>package.json</code>框架依赖的库信息配置，别人可以通过<code>npm install</code>来安装你的应用运行所需要的所有库。</li>
 </ul>
-<h2 id="加入数据存储"><a href="#加入数据存储" class="headerlink" title="加入数据存储"></a>加入数据存储</h2><p>很多网站都会统计日访问次数，总访问次数等，也有很多网站具有上传文件和评论的功能，这些数据在后面的访问者都会看见，那么这就需要将存储起来。</p>
-<p>使用mongoDB数据库：</p>
-<p>电脑安装mongodb数据库，并node下载mongoldb依赖库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install mongodb</span></pre></td></tr></table></figure>
-
-<p>创建一个dao文件夹，文件夹下创建一个<code>mongodbServices.js</code>的文件，我们将方法写在这个模块，暴露给外部使用。</p>
-<h2 id="数据上传和下载"><a href="#数据上传和下载" class="headerlink" title="数据上传和下载"></a>数据上传和下载</h2><p>前面说到，<code>public</code>文件夹被设置成静态资源库，类似于cdn的功能，既然我们可以获取目录下的内容，我们同样也可以上传内容，添加访问权限后有点像百度云的味道。</p>
+<h2 id="加入数据操作等逻辑"><a href="#加入数据操作等逻辑" class="headerlink" title="加入数据操作等逻辑"></a>加入数据操作等逻辑</h2><p>我们创建的Express应用是一个web服务器，浏览器访问时，服务器会将数据发给浏览器，浏览器渲染成我们看到的页面。web页面中有很多按钮，可以触发点击事件，提交表单数据等，这些有的就会请求到我们的服务器，经过一些逻辑和数据操作，将浏览器需要的数据返回。</p>
+<ul>
+<li><p>使用mongodb来保存一些页面数据，比如访问记录等</p>
+</li>
+<li><p>编辑一些逻辑脚本，来处理请求，返回结果</p>
+</li>
+</ul>
 <h2 id="网站安全"><a href="#网站安全" class="headerlink" title="网站安全"></a>网站安全</h2><p>一些长使用到的方法：</p>
 <ul>
 <li><p>配置IP白名单，限制单位时长访问次数</p>
@@ -234,7 +239,7 @@
 <li><p>常见web攻击的预防，如http头部信息，Cookie信息，SQL注入等，可以看下这篇博客<a href="https://www.cnblogs.com/qingmingsang/articles/10397870.html" target="_blank" rel="noopener">✈️</a></p>
 </li>
 </ul>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>如果把自己的网站当作QQ空间那样，用心装扮，赋予作者的气息，那么那将会是让人赏心悦目的空间。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>我们可以使用express框架的web服务器，丰富个人网站的功能，而不是仅仅是页面浏览，和服务器交互的过程比静态页面更符合我们的期望。</p>
 
       
 
@@ -257,6 +262,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">个人网站</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">web服务器</a>
         		</li>
       		
 		</ul>
@@ -435,7 +444,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">web服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -456,18 +481,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">QQ邮件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">markdown</a>
               </li>
             
             <div class="clearfix"></div>
