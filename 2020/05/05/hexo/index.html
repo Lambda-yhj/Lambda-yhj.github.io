@@ -293,6 +293,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2020/05/05/hexo/",
+  owner: 'Lambda-yhj',
+  repo: 'lambda-yhj.github.io',
+  oauth: {
+    client_id: 'ef0baf386748301b9e49',
+    client_secret: 'b2dd010a3191ef5dba4cbf6082f59dfdba268e49',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
