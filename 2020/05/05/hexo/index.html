@@ -8,16 +8,24 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>基于hexo创建自己的博客 | Lambda的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网络上有很多博客网站，像比较出名的简书，CSDN，博客园等等，我们可以注册账号就可以在里面写自己的博客">
-<meta name="keywords" content="hexo,博客">
+  <meta name="description" content="写博客的初衷大概就是分享和共同进步吧。网络上有很多博客网站，像比较出名的简书，CSDN，博客园等等，我们注册账号就可以在里面写自己的博客文章，这些文章常常都会在我们查阅资料，查找难题的解决方法时会参考到。但是，这些网站因为需要维护和经营，所以除了一些代币，小广告也是漫天飞，而且结构单一，是别人建好的固有框架，我们何不自己的博客自己做主，拥有”root权限”呢！">
+<meta name="keywords" content="hexo,git,博客,markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于hexo创建自己的博客">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;05&#x2F;hexo&#x2F;index.html">
 <meta property="og:site_name" content="Lambda的博客">
-<meta property="og:description" content="网络上有很多博客网站，像比较出名的简书，CSDN，博客园等等，我们可以注册账号就可以在里面写自己的博客">
+<meta property="og:description" content="写博客的初衷大概就是分享和共同进步吧。网络上有很多博客网站，像比较出名的简书，CSDN，博客园等等，我们注册账号就可以在里面写自己的博客文章，这些文章常常都会在我们查阅资料，查找难题的解决方法时会参考到。但是，这些网站因为需要维护和经营，所以除了一些代币，小广告也是漫天飞，而且结构单一，是别人建好的固有框架，我们何不自己的博客自己做主，拥有”root权限”呢！">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-05-05T00:29:22.920Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;hexo_local.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;create_repo.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;github_pages.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;deploy_config.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;github_pages_show.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;new_page_command.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;new_page.png">
+<meta property="og:updated_time" content="2020-05-05T05:05:09.922Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;blogImg&#x2F;hexo_local.png">
   
     <link rel="alternative" href="/atom.xml" title="Lambda的博客" type="application/atom+xml">
   
@@ -179,7 +187,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>网络上有很多博客网站，像比较出名的简书，CSDN，博客园等等，我们可以注册账号就可以在里面写自己的博客</p>
+        <p>写博客的初衷大概就是分享和共同进步吧。<br>网络上有很多博客网站，像比较出名的<a href="https://www.jianshu.com/" target="_blank" rel="noopener">简书</a>，<a href="https://www.csdn.net/" target="_blank" rel="noopener">CSDN</a>，<a href="https://www.cnblogs.com/" target="_blank" rel="noopener">博客园</a>等等，我们注册账号就可以在里面写自己的博客文章，这些文章常常都会在我们查阅资料，查找难题的解决方法时会参考到。<br>但是，这些网站因为需要维护和经营，所以除了一些代币，小广告也是漫天飞，而且结构单一，是别人建好的固有框架，我们何不自己的博客自己做主，拥有”root权限”呢！</p>
+<a id="more"></a>
+
+<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> 是一个快速、简洁且高效的博客框架。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li>安装node环境</li>
+<li>安装git</li>
+<li>markdown语法基础</li>
+</ul>
+<h2 id="快速搭建"><a href="#快速搭建" class="headerlink" title="快速搭建"></a>快速搭建</h2><p>打开命令行，输入以下命令，全局安装hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span></pre></td></tr></table></figure>
+
+<p>初始化项目，并在本地运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo init blog // 初始化博客项目</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">npm install // 安装依赖</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">hexo server // 本地运行</span></pre></td></tr></table></figure>
+
+<p>浏览器输入：<code>localhost:4000</code>运行成功的界面如下：<br><img src="/assets/blogImg/hexo_local.png" alt="Alt &#39;hexo_local.png&#39;" title="hexo_local.png"></p>
+<h2 id="部署到GitHub-Pages访问"><a href="#部署到GitHub-Pages访问" class="headerlink" title="部署到GitHub Pages访问"></a>部署到GitHub Pages访问</h2><p>首先在git上创建一个和自己github账号名一样的私有仓库<code>&lt;user-name&gt;.github.io</code>，注意小写，比如我这里创建的是这样的：<br><img src="/assets/blogImg/create_repo.png" alt="Alt &#39;create_repo.png&#39;" title="create_repo.png"></p>
+<p>在刚创建的仓库的<code>setting</code>中下拉，可以看见GitHub Pages的访问地址：<br><img src="/assets/blogImg/github_pages.png" alt="Alt &#39;github_pages.png&#39;" title="github_pages.png"></p>
+<p>然后，在hexo项目目录下找到<code>_config.yml</code>这个文件，在<code>deploy</code>下，配置自己之前创建的仓库，如下配置：<br><img src="/assets/blogImg/deploy_config.png" alt="Alt &#39;deploy_config.png&#39;" title="deploy_config.png"></p>
+<p>接着，安装<code>hexo-deployer-git</code>库，安装成功后命令行运行<code>hexo clean &amp;&amp; hexo deploy</code>即可发布到GitHub Pages，浏览器输入<code>&lt;user-name&gt;.github.io</code>即可防问到你的博客。效果如下：<br><img src="/assets/blogImg/github_pages_show.png" alt="Alt &#39;github_pages_show.png&#39;" title="github_pages_show.png"></p>
+<h2 id="丰富我的博客内容"><a href="#丰富我的博客内容" class="headerlink" title="丰富我的博客内容"></a>丰富我的博客内容</h2><p>写一篇博客文章，可以运行命令<code>hexo new [layout] title</code>，其中<code>layout</code>是只创建什么风格的博客文章，实际作用是指在那个目录下，<code>title</code>就是博客文章的标题。比如命令行输入<code>hexo new [post] 你真好看</code>，执行结果：<br><img src="/assets/blogImg/new_page_command.png" alt="Alt &#39;new_page_command.png&#39;" title="new_page_command.png"></p>
+<p>打开<code>source/_posts/你真好看.md</code>，<br><img src="/assets/blogImg/new_page.png" alt="Alt &#39;new_page.png&#39;" title="new_page.png"></p>
+<p>你可以开始你的写作，当然<code>hexo</code>支持<a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">markdown</a>语法,所以你得有markdown的语法知识唷！<br>推荐一款markdown编辑器，<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>，简洁明了，免费。<br>写好后，同样的命令<code>hexo clean &amp;&amp; hexo deploy</code>，发布到你的GitHub Pages。</p>
+<p>加入评论系统，博客文章一般发表一些观点，那么肯定有的访客会评论一些自己的看法，讨论才会产生更完美的方案。那么需要给我们的博客接入评论功能。</p>
+<p>添加一些装饰，比如右下角的<code>lived2d</code>动漫人物，还有背景音乐，打赏功能，置顶功能等等</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>写博客是对自己的知识和生活的提炼，总结和分享。虽然耗费时间，但坚持下来，受益匪浅。</p>
 
       
 
@@ -197,7 +230,15 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">博客</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">markdown</a>
         		</li>
       		
 		</ul>
@@ -364,7 +405,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
